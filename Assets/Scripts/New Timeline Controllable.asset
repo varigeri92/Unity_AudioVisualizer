@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4fea1ed8624924b82b2187e5a7dd27, type: 3}
+  m_Name: New Timeline Controllable
+  m_EditorClassIdentifier: 
+  Color_A: {r: 1, g: 0.7008203, b: 0, a: 0}
+  Color_B: {r: 0, g: 0, b: 0, a: 0}
+  power: 0

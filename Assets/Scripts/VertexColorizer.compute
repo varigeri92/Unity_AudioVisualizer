@@ -1,0 +1,48 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+RWStructuredBuffer<float2> uvs;
+RWStructuredBuffer<float2> uvs_f;
+RWStructuredBuffer<float4> colors;
+RWTexture2D<float4> sampledSound;
+Texture2D<float4> soundTexture;
+SamplerState samplersampledSound;
+RWTexture2D<float4> blendTarget;
+
+float t;
+
+RWTexture2D<float4> outTex;
+
+[numthreads(512,2,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{   
+
+    
+    uint x;
+    uint y;
+    sampledSound.GetDimensions(x,y);
+
+    uint xb;
+    uint yb;
+    blendTarget.GetDimensions(xb, yb);
+
+    uint3 texcoord = uint3((uint)(uvs[(id.x + 1) * id.y].x * x),
+                           (uint)(uvs[id.y * (id.x + 1)].y * y),
+                           0);
+    
+    uint3 texcoordb = uint3((uint)(uvs[(id.x + 1) * id.y].x * xb),
+                            (uint)(uvs[id.y * (id.x + 1)].y * yb),
+                            0);
+
+    t = 0.5;
+
+
+    //float4 color = sampledSound.SampleLevel(samplersampledSound, texcoord, 0);
+
+    uint vertexindex = id.y * (id.x + 1);
+    float4 basecolorvalue = sampledSound[texcoord.xy];
+    float4 targetValue = blendTarget[texcoordb.xy];
+    float4 vertexColor = lerp(basecolorvalue, targetValue, (float4)t);
+
+    colors[vertexindex] = vertexColor;
+}

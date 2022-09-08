@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8975304390059149856
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 68ac266bd084ac949b4887eac897bde5
+  m_EffectName: Distortion
+  m_MixLevel: 844b1f3621d8f7a4381117a4c37ac5ec
+  m_Parameters:
+  - m_ParameterName: Level
+    m_GUID: 3605088e7a99021479d97d713803df45
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-6310046500198536535
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: bd375d7bb7235044087fab6c8a7d6d1b
+  m_EffectName: ParamEQ
+  m_MixLevel: 83b83a5b0cd13924ca3dfa667db4ec23
+  m_Parameters:
+  - m_ParameterName: Center freq
+    m_GUID: aab88c1b0ffdaf94dbdb5843c331ce2a
+  - m_ParameterName: Octave range
+    m_GUID: fe0dc79e08c8d6b40bb11e3dd76d734a
+  - m_ParameterName: Frequency gain
+    m_GUID: 0e4dbed7cfe490145aed58c1029d55c4
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NewAudioMixer
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - d5c629d34bb239044b791cd210d3f80f
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: d5c629d34bb239044b791cd210d3f80f
+  m_Children: []
+  m_Volume: c4860b030842f104690cec6256366e47
+  m_Pitch: ef02f948eea5d2949bbb6b7e71972707
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: fb3ec90ef085199479530d834e80ed31
+  m_EffectName: Attenuation
+  m_MixLevel: 5d1b317d43887734cab592dfc98fd207
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 3b620ae0ab67d6c4da366f9a96a4bb03
+  m_FloatValues:
+    c4860b030842f104690cec6256366e47: 0
+    cfe01d15b3e234e41b5be34849259fca: 0.01
+    efa81406168a3c94a8c825e6dfe112f1: 20
+    519903175dbdaf649947a40a6e29de1c: 1
+    c0582a27cc729ad429872ca2b307b322: 0.821
+    e0af525786b6bd74dbc8e4e1a2a5d436: 1
+    bed5bc87b7146c840859abd9a92fb698: 3
+    0e4dbed7cfe490145aed58c1029d55c4: 1.686
+    fc894908c822c994aa5d674149d856c0: 20
+    ef02f948eea5d2949bbb6b7e71972707: 1
+    4d0a35c8a3f4b07449e6b21f1ad2130a: 1
+    d7204d49d05b8af4f81b29e9848c3e20: 2057
+    6253757930211e349b4e2f0987b6d355: 5690.9614
+    7f928c79816fe6a448e5022aee7045fc: 5
+    bd41d3da93539134690fc32579bf4fb1: 0
+    aab88c1b0ffdaf94dbdb5843c331ce2a: 20
+    11f7a40e9c76b8d4ca712f0ba0c0f5c4: 0
+    a28aef2ed005b864daabb977753b7066: 256
+    3605088e7a99021479d97d713803df45: 0
+    fe0dc79e08c8d6b40bb11e3dd76d734a: 2.15
+    1870942ffd052f64897c1ec6225dd2d8: 1
+    4e6af94fdf9960b41bd3ca81e7e15eff: 0.16299999
+    5d26388f358b0914db04885ef1bfe863: 1
+    5f61899f8d7cbad45a21e89bd62fc930: 5000
+  m_TransitionOverrides: {}
